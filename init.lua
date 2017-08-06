@@ -14,7 +14,7 @@ core.commands = {
 
 local function HandleSlashCommands(str)	
 	if (#str == 0) then	
-		-- User just entered "/pwrinc" with no additional args.
+		-- User just entered "/warinc" with no additional args.
 		core.Config.Toggle()
 		return		
 	end	
@@ -52,16 +52,16 @@ function core:CommandList()
 	local color = "fffb00"
 	core:PrintLine()
 	core:Print("List of slash commands:")
-	core:Print("|cff"..color.."/pwrinc|r - start the game")
-	core:Print("|cff"..color.."/pwrinc reset|r - reset the AddOn configuration")
-	core:Print("|cff"..color.."/pwrinc help|r  - shows help info")
-	core:Print("|cff"..color.."/pwrinc stats|r - shows the player statistics")
+	core:Print("|cff"..color.."/warinc|r - start the game")
+	core:Print("|cff"..color.."/warinc reset|r - reset the AddOn configuration")
+	core:Print("|cff"..color.."/warinc help|r  - shows help info")
+	core:Print("|cff"..color.."/warinc stats|r - shows the player statistics")
 	core:PrintLine()
 end
 
 function core:Print(...)
     local hex = select(4, self.Config:GetThemeColor())
-    local prefix = string.format("|cff%s%s|r", hex:upper(), "PowerIncoming:")
+    local prefix = string.format("|cff%s%s|r", hex:upper(), "War Inc.:")
     DEFAULT_CHAT_FRAME:AddMessage(string.join(" ", prefix, ...))
 end
 
@@ -73,7 +73,7 @@ end
 
 -- WARNING: self automatically becomes events frame!
 function core:init(event, name)
-	if (name ~= "PowerIncoming") then return end
+	if (name ~= "War Inc.") then return end
 
 	-- allows using left and right buttons to move through chat 'edit' box
 	for i = 1, NUM_CHAT_WINDOWS do
@@ -83,11 +83,11 @@ function core:init(event, name)
 	----------------------------------
 	-- Register Slash Commands!
 	----------------------------------
-	SLASH_PowerIncoming1 = "/pwrinc"
-	SlashCmdList.PowerIncoming = HandleSlashCommands
+	SLASH_WarInc1 = "/warinc"
+	SlashCmdList.WarInc = HandleSlashCommands
 
 	core:PrintLine()
-	core:Print("|cfffffb00/pwrinc|r - start the game")
+	core:Print("|cfffffb00/warinc|r - start the game")
 	core:PrintLine()
 
 	-- Needs to be removed, once developing is finished!

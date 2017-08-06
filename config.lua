@@ -15,7 +15,7 @@ local Config = core.Config
 local xCenter, yCenter = UIParent:GetCenter()
 
 local default = {
-	title = "Tic Tac Toe",
+	title = "War Inc.",
 
 	theme = {
 		r = 0, 
