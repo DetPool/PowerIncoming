@@ -10,7 +10,7 @@
 lib.lua
 config.lua
 init.lua
-Battlegrounds.lua
-Frame.lua
-Timer.lua
-TargetCounter.lua
+battlegrounds.lua
+frame.lua
+timer.lua
+targetCounter.lua
