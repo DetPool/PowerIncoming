@@ -1,0 +1,16 @@
+## Interface: 70200
+## Title: |cffff7d00PowerIncoming|r
+## Version: 1.0.0 alpha
+## Notes: Version 1.0.0 alpha: PowerIncoming. Self explanatory... Help: /ttt help
+## Notes-deDE: Version 1.0.0 alpha: PowerIncoming. Selbsterklärend... Hilfe: /ttt help
+## DefaultState: enabled
+## Author: DetPool
+
+
+lib.lua
+config.lua
+init.lua
+Battlegrounds.lua
+Frame.lua
+Timer.lua
+TargetCounter.lua
