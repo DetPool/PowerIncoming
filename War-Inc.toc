@@ -1,0 +1,16 @@
+## Interface: 70200
+## Title: |cffff7d00War-Inc|r
+## Version: 1.0.0 alpha
+## Notes: Version 1.0.0 alpha: War-Inc. Self explanatory... Help: /ttt help
+## Notes-deDE: Version 1.0.0 alpha: War-Inc. Selbsterklärend... Hilfe: /ttt help
+## DefaultState: enabled
+## Author: DetPool
+
+
+lib.lua
+config.lua
+init.lua
+battlegrounds.lua
+frame.lua
+timer.lua
+targetCounter.lua

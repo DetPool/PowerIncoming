@@ -5,46 +5,31 @@ local _, core = ...
 core.Config = {} -- adds Config table to addon namespace
 local Config = core.Config
 
--- test
-
-
---------------------------------------
--- Defaults
---------------------------------------
-
-local xCenter, yCenter = UIParent:GetCenter()
-
-local default = {
-	title = "War Inc.",
-
-	theme = {
-		r = 0, 
-		g = 0.8, -- 204/255
-		b = 1,
-		hex = "ff7d00",
-	},
-
-	position = {
-		x = xCenter * 1.4,
-		y = yCenter * 1.3,
-	},
+---------------------------------
+-- All Frames
+---------------------------------
+function Config:CreateAll()
+	Frame.CreateMain()
+	--[[
+	Config.CreateScrollFrame()
+	Config.CreateGameFrame()
+	Config.CreateSpaceFrame()
+	Config.CreateStatsFrame()
+	Config.CreateConfigFrame()
 	
-	size = {
-		width = 230,
-		height = 275,
-		expanded = {
-			height = 120,
-		},
-	},
+	Config:UpdateHelpPlate()
+	Config:ToggleHelpPlate()
+	]]
+	
+	
+	return Main
+end
 
-	chatTypes = {
-		"EMOTE",
-		"WHISPER",
-		"PARTY",
-		"RAID",
-        "GUILD",
-	}
-}
+-- Toggles or creates the Main Frame
+function Config:Toggle(show)
+	local menu = Main or Config:CreateAll()
+	menu:SetShown(not menu:IsShown() or show)
+end
 
 -- Reads the default theme color
 function Config:GetThemeColor()
